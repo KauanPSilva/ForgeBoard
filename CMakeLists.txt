@@ -10,6 +10,7 @@ add_executable(forgeboard
     src/main.cpp
     src/domain/Board.cpp
     src/application/CreateBoard.cpp
+    src/infrastructure/http/BoardController.cpp
 )
 
 target_link_libraries(forgeboard
