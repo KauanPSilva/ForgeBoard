@@ -8,6 +8,7 @@ find_package(Crow CONFIG REQUIRED)
 
 add_executable(forgeboard
     src/main.cpp
+    src/domain/Board.cpp
 )
 
 target_link_libraries(forgeboard

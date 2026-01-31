@@ -1,10 +1,12 @@
 #include <crow.h>
+#include "domain/Board.h"
 
 int main() {
-    crow::SimpleApp app;
+    Board board(1, "Projeto ForgeBoard");
 
-    CROW_ROUTE(app, "/")([](){
-        return "🔥 ForgeBoard API is running!";
+    crow::SimpleApp app;
+    CROW_ROUTE(app, "/")([&board](){
+        return "Board ativo: " + board.getName();
     });
 
     app.port(18080).multithreaded().run();
