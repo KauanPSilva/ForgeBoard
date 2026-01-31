@@ -1,0 +1,13 @@
+# build
+/build/
+/cmake-build-*/
+
+# vcpkg
+vcpkg_installed/
+
+# editor
+.vscode/
+
+# OS
+*.swp
+.DS_Store
