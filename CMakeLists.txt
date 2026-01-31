@@ -9,8 +9,14 @@ find_package(Crow CONFIG REQUIRED)
 add_executable(forgeboard
     src/main.cpp
     src/domain/Board.cpp
+    src/application/CreateBoard.cpp
 )
 
 target_link_libraries(forgeboard
     PRIVATE Crow::Crow
+)
+
+target_include_directories(forgeboard
+    PRIVATE
+        ${CMAKE_SOURCE_DIR}/src
 )
